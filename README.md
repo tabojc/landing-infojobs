@@ -47,9 +47,10 @@ Inicia el servidor
 
 ## Variables de entorno
 
-Para correr este proyecto, necesitarás agregar las siguientes variables de entorno en tu archivo .env
+Para correr este proyecto, necesitarás agregar las siguientes variable de entorno `API_INFOJOBS_TOKEN` en tu archivo .env
 
-`API_INFOJOBS_TOKEN`
+> [!NOTE]
+> Puedes conseguir el token en esta url [Developer Site InfoJobs](https://developer.infojobs.net/)
 
 
 ## Contribuciones
