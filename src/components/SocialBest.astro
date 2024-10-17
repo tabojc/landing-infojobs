@@ -1,14 +1,22 @@
 ---
 import LiteYoutube from "./LiteYoutube.astro"
+
+const VIDEOS = [
+    {'videoId': 'TLkFJKdGYkA', 'title': 'Video 1'},
+    {'videoId': 'ZQSea0oqOso', 'title': 'Video 2'},
+    {'videoId': '4oaOwHaL15Q', 'title': 'Video 3'},
+] as const
 ---
 
 <section class="mx-auto max-w-7xl w-full mb-20">
     <div class:list="mx-auto w-full">
         <h2 class="text-ij-black text-2xl pb-6 px-4">Trabaja con los mejores</h2>
         <div class="flex overflow-scroll custom-scrollbar px-2 snap-mandatory snap-x">
-            <LiteYoutube videoId="TLkFJKdGYkA" title="Video 1" />
-            <LiteYoutube videoId="ZQSea0oqOso" title="Video 2" />
-            <LiteYoutube videoId="4oaOwHaL15Q" title="Video 3" />
+            {
+                VIDEOS.map(({ videoId, title }) => (
+                    <LiteYoutube videoId={videoId} title={title} />
+                ))
+            }
         </div>
 </div>
 </section>
