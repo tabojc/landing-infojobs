@@ -1,4 +1,6 @@
-import type { DICTIONARY_TYPE } from "../const.ts"
+import type { DictionaryId } from "../types.ts"
+import { dictionaries } from "./mocks.ts"
+
 const INFOJOBS_API_ENDPOINT = "https://api.infojobs.net/api/1/"
 
 const TOKEN = import.meta.env.API_INFOJOBS_TOKEN
@@ -13,8 +15,7 @@ export const query = (path: string) => {
   }).then(res => res.json())
 }
 
-type DictionaryId = (typeof DICTIONARY_TYPE)[keyof typeof DICTIONARY_TYPE]
-
 export const getDictionary = (dictionaryId: DictionaryId) => {
+  if (!TOKEN) return Promise.resolve(dictionaries[dictionaryId])
   return query(`/dictionary/${dictionaryId}`)
 }
