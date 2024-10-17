@@ -15,7 +15,7 @@ export const query = (path: string) => {
   }).then(res => res.json())
 }
 
-export const getDictionary = (dictionaryId: DictionaryId) => {
+export const getDictionary = (dictionaryId: DictionaryId): Promise<Array<{ id: number, value: string, order: number, key: string }>> => {
   if (!TOKEN) return Promise.resolve(dictionaries[dictionaryId])
   return query(`/dictionary/${dictionaryId}`)
 }
