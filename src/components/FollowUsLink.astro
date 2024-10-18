@@ -1,7 +1,7 @@
 ---
-const { href } = Astro.props;
+const { href, socialPlatform } = Astro.props;
 ---
 
-<a href={href} target="_blank" rel="noopener noreferrer">
+<a href={href} target="_blank" rel="noopener noreferrer" aria-label={socialPlatform}>
   <slot />
 </a>
