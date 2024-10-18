@@ -7,6 +7,8 @@ const VIDEOS = [
     {'videoId': 'TLkFJKdGYkA', 'title': 'Video 1'},
     {'videoId': 'ZQSea0oqOso', 'title': 'Video 2'},
     {'videoId': '4oaOwHaL15Q', 'title': 'Video 3'},
+    {'videoId': '6Pi8IPGKQsY', 'title': 'Video 3'},
+    {'videoId': 'UaDmVSoPONw', 'title': 'Video 3'},
 ] as const
 ---
 
@@ -15,11 +17,11 @@ const VIDEOS = [
         <div class="flex justify-between pb-6 px-4">
             <h2 class="text-ij-black text-2xl">Trabaja con los mejores</h2>
             <div class="md:flex items-center justify-end opacity-80 hidden">
-                <button class="mr-2 opacity-65 hover:opacity-100 hover:scale-105 transition-all active:scale-100"><LeftArrow size="38" /></button>
-                <button class="opacity-65 hover:opacity-100 hover:scale-105 transition-all active:scale-100"><RightArrow size="38" /></button>
+                <button class="mr-2 opacity-65 hover:opacity-100 hover:scale-105 transition-all active:scale-100" id="right-button"><LeftArrow size="38" /></button>
+                <button class="opacity-65 hover:opacity-100 hover:scale-105 transition-all active:scale-100" id="left-button"><RightArrow size="38" /></button>
             </div>
         </div>
-        <div class="flex overflow-scroll custom-scrollbar px-2 snap-mandatory snap-x">
+        <div class="flex overflow-scroll custom-scrollbar px-2 snap-mandatory snap-x" id="carousel">
             {
                 VIDEOS.map(({ videoId, title }) => (
                     <LiteYoutube videoId={videoId} title={title} />
@@ -39,3 +41,23 @@ const VIDEOS = [
     scrollbar-width: none;
 }
 </style>
+
+<script>
+    const rightButton = document.querySelector('#right-button')
+    const leftButton = document.querySelector('#left-button')
+    const carousel = document.querySelector('#carousel')
+
+    rightButton?.addEventListener('click', () => {
+        carousel?.scrollTo({
+            left: carousel.scrollLeft - 300,
+            behavior: 'smooth'
+        });
+    })
+
+    leftButton?.addEventListener('click', () => {
+        carousel?.scrollTo({
+            left: carousel.scrollLeft + 300,
+            behavior: 'smooth'
+        });
+    })
+</script>
