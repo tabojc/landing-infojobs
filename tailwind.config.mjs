@@ -21,6 +21,9 @@ export default {
       letterSpacing: {
         separated: '0.35px',
       },
+      padding: {
+        '15': '60px'
+      },
     },
   },
   plugins: [],
