@@ -56,21 +56,21 @@ const VIDEOS = [
 </style>
 
 <script>
-    const rightButton = document.querySelector("#right-button");
-    const leftButton = document.querySelector("#left-button");
-    const carousel = document.querySelector("#carousel");
+    const rightButton = document.querySelector('#right-button');
+    const leftButton = document.querySelector('#left-button');
+    const carousel = document.querySelector('#carousel');
 
-    rightButton?.addEventListener("click", () => {
+    rightButton?.addEventListener('click', () => {
         carousel?.scrollTo({
             left: carousel.scrollLeft - 300,
-            behavior: "smooth",
+            behavior: 'smooth',
         });
     });
 
-    leftButton?.addEventListener("click", () => {
+    leftButton?.addEventListener('click', () => {
         carousel?.scrollTo({
             left: carousel.scrollLeft + 300,
-            behavior: "smooth",
+            behavior: 'smooth',
         });
     });
 </script>
