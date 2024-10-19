@@ -13,9 +13,7 @@ Este proyecto es una landing page para InfoJobs, diseñada para proporcionar una
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 
-## Autores
-
-- [@midudev](https://github.com/codigoconjuan)
+## Contribuidores
 
 
 ## Correr Localmente

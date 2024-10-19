@@ -35,7 +35,9 @@ const studies = await getStudies()
   <search class="bg-white rounded-3xl p-4">
     <form>
       <div>
-        <select class="w-full py-4 border-b border-gray-300 text-gray-600">
+        <select
+          class="w-full py-4 border-b border-gray-300 text-gray-600 bg-transparent cursor-pointer"
+        >
           {
             studies.map(({ id, value, key }) => {
               const isDefault = id === 0
@@ -54,14 +56,14 @@ const studies = await getStudies()
       <div>
         <input
           placeholder="Estudios, puesto, empresa..."
-          class="w-full py-4 border-b border-gray-300 text-gray-600"
+          class="w-full py-4 border-b border-gray-300 text-gray-600 focus:outline-none"
         />
       </div>
 
       <div class="mb-8">
         <input
           placeholder="Provincia o población"
-          class="w-full py-4 text-gray-600"
+          class="w-full py-4 text-gray-600 focus:outline-none"
         />
       </div>
 
@@ -76,10 +78,13 @@ const studies = await getStudies()
 
   <footer>
     <h5 class="text-center pt-8 pb-4">Explora trabajos que se adaptan a ti</h5>
-    <div class="flex flex-wrap gap-4 justify-around">
+    <div class="flex flex-wrap gap-4 justify-around md:justify-center">
       {
         SHORTCUTS.map(({ label, href }) => (
-          <a class="bg-white rounded-full p-4 text-primary" href={href}>
+          <a
+            class="bg-white rounded-full p-4 md:px-6 shadow-sm text-primary transition hover:scale-105 hover:text-white hover:bg-primary"
+            href={href}
+          >
             {label}
           </a>
         ))
