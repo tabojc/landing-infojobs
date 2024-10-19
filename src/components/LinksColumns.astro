@@ -102,24 +102,24 @@ const linksInfo = [
 ];
 ---
 
-<SectionContainer class="rounded-3xl px-4 py-10">
+<SectionContainer>
   <div class="gap-40 flex flex-col md:flex-row">
     {
       linksInfo.map(({ title, links }, index) => {
         return (
           <div class={`${index === 0 ? "" : "hidden sm:block"}`}>
-            <h2 class="text-black font-semibold text-2xl  hidden md:block">
+            <h2 class="text-black font-semibold text-2xl hidden md:block">
               {title}
             </h2>
-            <ul class="flex flex-row justify-evenly md:flex-col underline md:no-underline">
+            <ul class="flex flex-row justify-evenly md:flex-col underline md:no-underline gap-2">
               {links.map(({ label, href }) => {
                 return (
                   <li
-                    class={`mb-2 ${
+                    class={
                       label !== "Ayuda" && label !== "Condiciones legales"
                         ? "hidden md:block hover:underline"
                         : ""
-                    }`}
+                    }
                   >
                     <a href={href} class="text-lg">
                       {label}
