@@ -38,6 +38,7 @@ const sortedStudies = studies.sort((a, b) => a.order - b.order)
       <div>
         <select
           class="w-full py-4 border-b border-gray-300 text-gray-400 bg-transparent cursor-pointer"
+          aria-label="Selecciona tu nivel de estudios"
         >
           {
             sortedStudies.map(({ id, value, key }) => {
