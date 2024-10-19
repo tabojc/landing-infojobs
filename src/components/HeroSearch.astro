@@ -37,6 +37,7 @@ const studies = await getStudies()
       <div>
         <select
           class="w-full py-4 border-b border-gray-300 text-gray-600 bg-transparent cursor-pointer"
+          aria-label="Selecciona tu nivel de estudios"
         >
           {
             studies.map(({ id, value, key }) => {
