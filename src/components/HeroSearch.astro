@@ -37,7 +37,7 @@ const sortedStudies = studies.sort((a, b) => a.order - b.order)
     <form>
       <div>
         <select
-          class="w-full py-4 border-b border-gray-300 text-gray-600 bg-transparent cursor-pointer"
+          class="w-full py-4 border-b border-gray-300 text-gray-400 bg-transparent cursor-pointer"
         >
           {
             sortedStudies.map(({ id, value, key }) => {
@@ -45,7 +45,7 @@ const sortedStudies = studies.sort((a, b) => a.order - b.order)
               const literal = isDefault ? "Nivel de estudios" : value
 
               return (
-                <option value={key} disabled={isDefault} selected={isDefault}>
+                <option class={isDefault ? '': 'text-gray-600'} value={key} disabled={isDefault} selected={isDefault}>
                   {literal}
                 </option>
               )
