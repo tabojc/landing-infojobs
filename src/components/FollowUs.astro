@@ -5,22 +5,25 @@ import GooglePlay from "@icons/GooglePlay.astro";
 import TikTok from "@icons/TikTok.astro";
 import Twitter from "@icons/Twitter.astro";
 import YouTube from "@icons/YouTube.astro";
-import FollowUsLink from "./FollowUsLink.astro";
+import FollowUsLink from "@components/FollowUsLink.astro";
+
+const hoverSocialNetworks = "md:transition-transform md:hover:scale-110";
+const hoverStoreApps = "md:transition-[filter] md:hover:saturate-150";
 ---
 
-<section
-  class="bg-[#F5F5F5] flex flex-col items-center justify-between lg:p-10 lg:flex-row"
->
+
+<section class="flex flex-col items-center justify-between md:flex-row md:p-10">
   <article
-    class="w-full flex items-center justify-center gap-2 py-4 flex-wrap lg:justify-start"
+    class="w-full flex items-center justify-center gap-2 py-4 flex-wrap md:justify-start"
   >
-    <h4 class="tracking-[0.38px] text-xl leading-6 font-semibold">
+    <h4 class="text-xl tracking-[0.38px] leading-6 font-semibold">
       ¡Síguenos!
     </h4>
 
     <span class="flex items-center gap-2">
       <FollowUsLink
         href="https://www.tiktok.com/@infojobs"
+        class={hoverSocialNetworks}
         socialPlatform="Visítanos en TikTok."
       >
         <TikTok />
@@ -28,17 +31,23 @@ import FollowUsLink from "./FollowUsLink.astro";
 
       <FollowUsLink
         href="https://www.youtube.com/InfoJobs"
+        class={hoverSocialNetworks}
         socialPlatform="Visítanos en YouTube."
       >
         <YouTube />
       </FollowUsLink>
 
-      <FollowUsLink href="https://x.com/InfoJobs" socialPlatform="Visítanos en X.">
+      <FollowUsLink
+        href="https://x.com/InfoJobs"
+        class={hoverSocialNetworks}
+        socialPlatform="Visítanos en X."
+      >
         <Twitter />
       </FollowUsLink>
 
       <FollowUsLink
         href="https://www.facebook.com/InfoJobs"
+        class={hoverSocialNetworks}
         socialPlatform="Visítanos en Facebook."
       >
         <Facebook />
@@ -47,10 +56,11 @@ import FollowUsLink from "./FollowUsLink.astro";
   </article>
 
   <article
-    class="flex items-center justify-center gap-4 pb-4 flex-wrap lg:flex-nowrap lg:pb-0"
+    class="w-full flex items-center justify-center gap-4 pb-4 flex-wrap md:flex-nowrap md:pb-0 md:gap-2 md:justify-end"
   >
     <FollowUsLink
       href="https://infojobs.go.link/?adj_t=1b8zxouv_1bnixj2z"
+      class={hoverStoreApps}
       socialPlatform="Visítanos en Google."
     >
       <GooglePlay />
@@ -58,6 +68,7 @@ import FollowUsLink from "./FollowUsLink.astro";
 
     <FollowUsLink
       href="https://infojobs.onelink.me/2882600328/rjh2wn2f"
+      class={hoverStoreApps}
       socialPlatform="Visítanos en la AppStore."
     >
       <AppStore />
