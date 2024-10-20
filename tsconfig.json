@@ -6,6 +6,9 @@
       "@components/*": [
         "src/components/*"
       ],
+      "@ui/*": [
+        "src/components/ui/*"
+      ],
       "@layouts/*": [
         "src/layouts/*"
       ],
@@ -15,6 +18,9 @@
       "@lib/*": [
         "src/lib/*"
       ],
+      "@types": [
+        "src/types.ts"
+      ]
     }
   }
 }
