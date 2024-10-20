@@ -99,9 +99,13 @@ const sortedStudies = studies.sort((a, b) => a.order - b.order)
 
 <script>
   const select = document.querySelector('select')
-  select?.addEventListener('change', () => {
-    if (select.value !== '') {
-      select.classList.add('text-gray-600');
+
+  function actualizarColor() {
+    if (select?.value !== 'indicar-nivel') {
+      select?.classList.add('text-gray-600');
     }
-  })
+  }
+
+  document.addEventListener('DOMContentLoaded', actualizarColor)
+  select?.addEventListener('change', actualizarColor)
 </script>
