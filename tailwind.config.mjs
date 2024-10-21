@@ -19,6 +19,9 @@ export default {
       borderRadius: {
         "4xl": "3rem",
       },
+      backgroundSize: {
+        'auto-height': 'auto 100%', 
+      },
       letterSpacing: {
         separated: "0.35px",
       },
