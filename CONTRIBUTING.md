@@ -19,10 +19,7 @@ Se anima y valora todo tipo de contribuciones. Consulta la [Tabla de Contenidos]
 - [Reportar Errores](#reportar-errores)
 - [Sugerir Mejoras](#sugerir-mejoras)
 - [Tu Primera Contribución de Código](#tu-primera-contribución-de-código)
-- [Mejorar la Documentación](#mejorar-la-documentación)
-- [Guías de Estilo](#guías-de-estilo)
 - [Mensajes de Commit](#mensajes-de-commit)
-- [Únete al Equipo del Proyecto](#únete-al-equipo-del-proyecto)
 
 
 ## Código de Conducta
