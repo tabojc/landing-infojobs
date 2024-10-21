@@ -24,7 +24,7 @@ const cardsOportunidades = [
   {
     cardsOportunidades.map((card) => (
       <a
-        class={`flex flex-col rounded-[16px] pt-4 px-4 md:px-[60px] md:pt-[40px] w-auto h-[436px] md:h-[628px] overflow-hidden ${card.gradient}`}
+        class={`group flex flex-col rounded-[16px] pt-4 px-4 md:px-[60px] md:pt-[40px] w-auto h-[436px] md:h-[628px] overflow-hidden ${card.gradient}`}
         href={card.href} target="_blank"
       >
         <p class="mt-4 text-[24px] leading-7 font-semibold text-gray-900">
@@ -38,7 +38,7 @@ const cardsOportunidades = [
         <div class="flex justify-center mt-auto w-full h-auto">
         <div class={`flex justify-center mt-auto w-full h-auto md:mb-0 ${card.marginBotton}`}>
           <img
-            class="md:w-[500px] md:h-[396px] w-full h-full scale-125 md:scale-100 transition md:hover:scale-105 md:hover:z-10"
+            class="md:w-[500px] md:h-[396px] w-full h-full scale-125 md:scale-100 transition md:group-hover:scale-105 md:group-hover:z-10"
             src={card.img}
             alt="InfoJobs"
           />
