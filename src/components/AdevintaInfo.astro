@@ -1,0 +1,65 @@
+---
+const ADEVINTA_LINK = "https://adevinta.com/es/";
+const LINKS = [
+  {
+    label: "Fotocasa",
+    href: "https://www.fotocasa.es/es",
+  },
+  {
+    label: "habitaclia",
+    href: "https://www.habitaclia.com/",
+  },
+  {
+    label: "Coches.net",
+    href: "https://www.coches.net/",
+  },
+  {
+    label: "Motos.net",
+    href: "https://motos.coches.net/",
+  },
+  {
+    label: "Milanuncios",
+    href: "https://www.milanuncios.com/",
+  },
+  {
+    label: "JobisJob",
+    href: "https://www.jobisjob.es/",
+  },
+];
+---
+
+<div class="flex flex-col items-center px-10">
+  <ul
+    class="hidden md:inline-flex gap-x-16 gap-y-4 flex-wrap justify-between text-sm w-full pb-10 underline-offset-[3px]"
+  >
+    <li>
+      <span>InfoJobs es parte de </span>
+      <a class="hover:underline" href={ADEVINTA_LINK} target="_blank"
+        >Adevinta</a
+      >
+    </li>
+
+    {
+      LINKS.map(({ label, href }) => (
+        <li class="flex-grow text-center">
+          <a
+            class="hover:underline"
+            href={href}
+            target="_blank"
+            aria-label={`Visita ${label}`}
+          >
+            {label}
+          </a>
+        </li>
+      ))
+    }
+
+    <li class="flex-grow text-center">
+      <span> © Adevinta Spain S.L.U. </span>
+    </li>
+  </ul>
+
+  <a href={ADEVINTA_LINK} target="_blank" title="Adevinta">
+    <img src="/adevinta-logo.webp" alt="Adevinta logo" />
+  </a>
+</div>
