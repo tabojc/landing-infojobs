@@ -1,0 +1,53 @@
+---
+import CloseIcon from "@icons/CloseIcon.astro";
+import FileCard from "@components/FileCard.astro";
+---
+
+<section
+  id="infographic-modal"
+  class="modal-active transition-all duration-300 fixed inset-0 bg-white p-2 z-[999] opacity-0 invisible"
+>
+  <header class="w-full h-[40px] flex items-center justify-end px-4 lg:px-8">
+    <button
+      id="btn-modal"
+      class="p-2 rounded-full transition-colors duration-300 md:hover:bg-gray-200"
+    >
+      <CloseIcon />
+    </button>
+  </header>
+  <div class="h-full w-full rounded-lg overflow-y-auto">
+    <slot />
+  </div>
+</section>
+
+<style>
+  .modal-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+</style>
+
+<script>
+  const modal = document.querySelector("#infographic-modal");
+  const btnModal = document.querySelector(
+    "#btn-modal"
+  ) as HTMLButtonElement | null;
+
+  const toggleModal = () => {
+    const isActive = modal?.classList.contains("modal-active");
+
+    if (isActive) {
+      modal?.classList.remove("modal-active");
+      document.body.classList.remove("no-scroll");
+    } else {
+      modal?.classList.add("modal-active");
+      document.body?.classList.add("no-scroll");
+    }
+  };
+
+  btnModal?.addEventListener("click", () => toggleModal());
+</script>
