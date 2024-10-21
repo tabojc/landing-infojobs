@@ -5,7 +5,7 @@ import HeroSearch from "@components/HeroSearch.astro";
 import SocialBest from "@components/SocialBest.astro";
 import PreFooter from "@components/PreFooter.astro";
 import InfographicModal from "@components/InfographicModal.astro";
-import FileCard from "@components/StandsInterviews.astro";
+import StandsInterviews from "@components/StandsInterviews.astro";
 
 import Layout from "@layouts/Layout.astro";
 ---
@@ -16,7 +16,8 @@ import Layout from "@layouts/Layout.astro";
   <SocialBest />
   <CoolJobs />
   <PreFooter />
-  <InfographicModal>
-    <FileCard />
-  </InfographicModal>
+  <InfographicModal />
+
+  <!-- Infografías -->
+  <StandsInterviews infographicId="no-experience" />
 </Layout>
