@@ -9,36 +9,43 @@ const coolJobs: CoolJobs[] = [
     image: "/img/cool-jobs/port-aventura.webp",
     title: "Probador de montañas rusas",
     brand: "Port Aventura World",
+    section_id: "lp-pom-box-499",
   },
   {
     image: "/img/cool-jobs/maxibon.webp",
     title: "Catadora de helados",
     brand: "Maxibon",
+    section_id: "lp-pom-box-515",
   },
   {
     image: "/img/cool-jobs/wizink-center.webp",
     title: "Probadora de conciertos",
     brand: "WiZink Center",
+    section_id: "lp-pom-box-528",
   },
   {
     image: "/img/cool-jobs/dominos.webp",
     title: "Catadora de pizzas",
     brand: "Domino's",
+    section_id: "lp-pom-box-534",
   },
   {
     image: "/img/cool-jobs/btravel.webp",
     title: "Probadora de viajes",
     brand: "B travel",
+    section_id: "lp-pom-box-584",
   },
   {
     image: "/img/cool-jobs/grefusa.webp",
     title: "Probadora de snacks",
     brand: "Grefusa",
+    section_id: "lp-pom-box-522",
   },
   {
     image: "/img/cool-jobs/visa.webp",
     title: "Probador de pagos con el móvil",
     brand: "Visa",
+    section_id: "lp-pom-box-598",
   },
 ];
 ---
@@ -59,8 +66,8 @@ const coolJobs: CoolJobs[] = [
       class="flex items-center gap-6 overflow-x-auto -mx-4 px-4 lg:p-0 lg:m-0 lg:grid lg:grid-cols-4 lg:w-[1200px] lg:z-10"
     >
       {
-        coolJobs.map(({ image, title, brand }) => (
-          <CoolJobCard image={image} title={title} brand={brand} />
+        coolJobs.map(({ image, title, brand, section_id }) => (
+          <CoolJobCard image={image} title={title} brand={brand} id={section_id} />
         ))
       }
 

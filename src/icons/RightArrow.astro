@@ -1,9 +1,7 @@
----
-interface Props {
-	size: string
-}
-
-const { size } = Astro.props
----
-
-<svg  xmlns="http://www.w3.org/2000/svg"  width={size}  height={size}  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-circle-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2l.324 .005a10 10 0 1 1 -.648 0l.324 -.005zm.613 5.21a1 1 0 0 0 -1.32 1.497l2.291 2.293h-5.584l-.117 .007a1 1 0 0 0 .117 1.993h5.584l-2.291 2.293l-.083 .094a1 1 0 0 0 1.497 1.32l4 -4l.073 -.082l.064 -.089l.062 -.113l.044 -.11l.03 -.112l.017 -.126l.003 -.075l-.007 -.118l-.029 -.148l-.035 -.105l-.054 -.113l-.071 -.111a1.008 1.008 0 0 0 -.097 -.112l-4 -4z" /></svg>
+<svg width="32" height="32" fill="none" viewBox="0 0 32 32" {...Astro.props}>
+  <path
+    fill="currentColor"
+    fill-rule="evenodd"
+    d="M13.105 24.667c.354.002.695-.137.946-.387l5.44-5.44a4 4 0 0 0 0-5.653L14.038 7.72a1.333 1.333 0 0 0-1.88 1.88l5.453 5.467c.517.52.517 1.36 0 1.88l-5.44 5.44a1.333 1.333 0 0 0 .947 2.28h-.013Z"
+    clip-rule="evenodd"></path>
+</svg>
