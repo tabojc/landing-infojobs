@@ -52,7 +52,12 @@ const sortedStudies = studies.sort((a, b) => a.order - b.order)
               const literal = isDefault ? "Nivel de estudios" : value
 
               return (
-                <option class={isDefault ? '': 'text-gray-600'} value={key} disabled={isDefault} selected={isDefault}>
+                <option
+                  class={isDefault ? "" : "text-gray-600"}
+                  value={key}
+                  disabled={isDefault}
+                  selected={isDefault}
+                >
                   {literal}
                 </option>
               )
@@ -79,9 +84,7 @@ const sortedStudies = studies.sort((a, b) => a.order - b.order)
         class="rounded-full text-lg font-medium bg-accent hover:saturate-150 transition text-white px-4 py-2 inline-flex gap-x-2 justify-center items-center w-full lg:size-12 lg:mt-1 lg:hover:scale-105"
       >
         <SearchIcon />
-        <p class="lg:hidden">
-          Buscar ofertas
-        </p>
+        <p class="lg:hidden">Buscar ofertas</p>
       </button>
     </form>
   </search>
@@ -104,14 +107,14 @@ const sortedStudies = studies.sort((a, b) => a.order - b.order)
 </SectionContainer>
 
 <script>
-  const select = document.querySelector('select')
+  const select = document.querySelector("select")
 
   function actualizarColor() {
-    if (select?.value !== 'indicar-nivel') {
-      select?.classList.add('text-gray-600');
+    if (select?.value !== "indicar-nivel") {
+      select?.classList.add("text-gray-600")
     }
   }
 
-  document.addEventListener('DOMContentLoaded', actualizarColor)
-  select?.addEventListener('change', actualizarColor)
+  document.addEventListener("DOMContentLoaded", actualizarColor)
+  select?.addEventListener("change", actualizarColor)
 </script>
