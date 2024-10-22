@@ -184,7 +184,7 @@ Para correr este proyecto, necesitarás agregar las siguientes variable de entor
 > Debes loguearte con tu cuenta infojobs, y al crear una app, te darán tus credenciales.
 
 > [!WARNING]
-> Desabilitado en este momento.
+> Deshabilitado en este momento.
 
 ## Contribuciones
 
