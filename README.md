@@ -180,8 +180,11 @@ Inicia el servidor
 Para correr este proyecto, necesitarás agregar las siguientes variable de entorno `API_INFOJOBS_TOKEN` en tu archivo .env
 
 > [!NOTE]
-> Puedes conseguir el token en esta url [Developer Site InfoJobs](https://developer.infojobs.net/)
+> Puedes conseguir el token en esta url [Developer Site InfoJobs](https://developer.infojobs.net/).
+> Debes loguearte con tu cuenta infojobs, y al crear una app, te darán tus credenciales.
 
+> [!WARNING]
+> Desabilitado en este momento.
 
 ## Contribuciones
 
