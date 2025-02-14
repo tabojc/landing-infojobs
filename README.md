@@ -69,7 +69,7 @@ Este proyecto es una landing page para InfoJobs, diseñada para proporcionar una
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/gusCreator>
+        <a href=https://github.com/gustadev24>
             <img src=https://avatars.githubusercontent.com/u/147654561?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Luis Gustavo Sequeiros Condori/>
             <br />
             <sub style="font-size:14px"><b>Luis Gustavo Sequeiros Condori</b></sub>
